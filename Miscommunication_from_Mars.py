@@ -5,14 +5,10 @@ for i in range(int(input())):
 d = int(input())
 re = int(input())
 
-final = []
-
 for i in range(len(li)):
-    for j in range(len(li)):
+    for j in range(i, len(li)):
         if li[i] != li[j] and abs(li[i] - li[j]) == d and li[i] ^ li[j] == re:
-            if [li[i], li[j]] not in final and [li[j], li[i]] not in final:
-                final.append([li[i], li[j]])
-
-for i in final:
-    i.sort()
-    print(str(i[0]) + "\t" + str(i[1]))
+            if li[i] < li[j]:
+                print(str(li[i]) + "\t" + str(li[j]))
+            else:
+                print(str(li[j]) + "\t" + str(li[i]))            
