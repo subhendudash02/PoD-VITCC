@@ -22,10 +22,10 @@ int main(){
             int x = arr[i] - arr[j];
             if ((arr[i] != arr[j]) && (abs(x) == d) && ((arr[i] ^ arr[j]) == re)){
                 if (arr[i] < arr[j]){
-                    printf("%d \t %d\n", arr[i], arr[j]);
+                    printf("%d\t%d\n", arr[i], arr[j]);
                 }
                 else{
-                    printf("%d \t %d\n", arr[j], arr[i]);
+                    printf("%d\t%d\n", arr[j], arr[i]);
                 }
             }
         }
