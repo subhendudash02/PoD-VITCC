@@ -1,0 +1,34 @@
+m = int(input())
+li_m = list(map(int, input().split()))
+n = int(input())
+li_n = list(map(int, input().split()))
+
+M1 = []
+M2 = []
+
+for i in li_m:
+    if i % 5 == 0:
+        M1.append(i)
+    else:
+        M2.append(i)
+
+for i in li_n:
+    if i % 5 == 0:
+        M1.append(i)
+    else:
+        M2.append(i)
+
+M1.sort()
+M2.sort()
+
+for i in range(len(M1)):
+    if i == len(M1) - 1:
+        print(str(M1[i]) + " ")
+    else:
+        print(M1[i], end = " ")
+
+for i in range(len(M2)):
+    if i == len(M2) - 1:
+        print(str(M2[i]) + " ")
+    else:
+        print(M2[i], end = " ")
